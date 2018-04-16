@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>Tweets</h1>
+    </div>
+    <ul class="list-group">
+        {% for tweet in tweets %}
+        <li class="list-group-item"> <a href='tweets/{{tweet.id}}'> {{ tweet.title }} </a> </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
